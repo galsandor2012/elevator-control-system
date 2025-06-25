@@ -1,6 +1,6 @@
 ## Introduction
 
-I received this test assignment from the WebGurus team and was excited to start working on it.
+I received this test assignment from the WebGurus team and was excited to start working on it.<br>
 In this documentation, I describe in detail how I understood the task, how I approached the problem, and how I implemented the solution step by step.
 My goal is to explain the system's logic and my thinking in a clear and understandable way.
 
