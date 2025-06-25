@@ -56,17 +56,21 @@ In the `index.html` file, there's a `div` element with the ID `"building"` place
 
 **4.1. Defining the Number of Floors**
 
-`const FLOORS = 7;`
+```
+const FLOORS = 7;
+```
 
 This constant (`const`) defines how many levels the building has. Since we start counting from 0, this represents floors `0` through `6`, resulting in a total of **7 floors** (Ground + 6 upper floors).
 We use **uppercase letters** for the variable name to indicate that it is a constant value, which will not change during the execution of the program.
 
 **4.2. Initializing the Elevators**
 
-`const lifts = [<br>
-  { name: "A 🛗", currentFloor: 0 },<br>
-  { name: "B 🛗", currentFloor: 6 },<br>
-];`
+```
+const lifts = [
+  { name: "A 🛗", currentFloor: 0 },
+  { name: "B 🛗", currentFloor: 6 },
+];
+```
 
 This is an **array** that contains two **objects** – representing the two elevators:
 * `name`: an identifier or emoji that helps distinguish between the elevators,
@@ -75,11 +79,13 @@ At the start of the program, one elevator is on the ground floor (`0`), and the 
 
 **4.3. Rendering the Building – `renderFloors()`**
 
-`function renderFloors() {
+```
+function renderFloors() {
   const building = document.getElementById("building");
   building.innerHTML = "";
   ...
-}`
+}
+```
 
 This function **renders the entire building** into the browser. For each floor, it creates:
 * a floor label (e.g., `Floor 4` or `Ground`),
@@ -87,34 +93,42 @@ This function **renders the entire building** into the browser. For each floor, 
 * and a display indicating whether there is an elevator on that floor.
 * If the current floor is 0, the label will show as **Ground**.
 
-`for (let i = FLOORS - 1; i >= 0; i--) {`
+```
+for (let i = FLOORS - 1; i >= 0; i--) {
+```
 
 This loop draws the building from top to bottom, starting from the highest floor down to the ground floor.
 
 **4.4. Displaying Buttons and Elevator Positions**
 
-`if (i < FLOORS - 1) { ... ⬆️ button ... }
-if (i > 0)         { ... ⬇️ button ... }`
+```
+if (i < FLOORS - 1) { ... ⬆️ button ... }
+if (i > 0)         { ... ⬇️ button ... }
+```
 
 The buttons are shown **only if there is somewhere to go**:
 * No up-button on the top floor.
 * No down-button on the ground floor.
 
-`const liftPos = document.createElement("div");
+```
+const liftPos = document.createElement("div");
 liftPos.textContent = lifts
   .filter(l => l.currentFloor === i)
   .map(l => l.name)
-  .join(", ") || "";`
+  .join(", ") || "";
+```
 
 This checks whether there is an elevator on the current floor.
 If so, it displays the elevator’s name.
 
 **4.5. Calling the Elevator – `callElevator()`**
 
-`function callElevator(requestedFloor, direction) {
+```
+function callElevator(requestedFloor, direction) {
    const chosenLift = getClosestLift(requestedFloor);
    moveLift(chosenLift, requestedFloor);
-}`
+}
+```
 
 This function is triggered when a button is pressed. Its responsibilities:
 * Determine which elevator is **closest** to the requested floor,
@@ -122,20 +136,24 @@ This function is triggered when a button is pressed. Its responsibilities:
 
 **4.6. Selecting the Closest Elevator – `getClosestLift()`**
 
-`function getClosestLift(floor) {
+```
+function getClosestLift(floor) {
   ...
-}`
+}
+```
 
 This function determines which elevator is **closest** to the called floor.
 If both elevators are equally distant, it selects the one located on the **lower floor**.
 
 **4.7. Moving the Elevator – `moveLift()`**
 
-`function moveLift(lift, targetFloor) {
+```
+function moveLift(lift, targetFloor) {
    const interval = setInterval(() => {
      ...
    }, 500);
-}`
+}
+```
 
 This function **moves the elevator step by step**:
 * It updates every 500 milliseconds,
@@ -146,7 +164,9 @@ The `setInterval` method starts a **timed loop**, which continuously updates the
 
 **4.8. Initial Rendering**
 
-`renderFloors();`
+```
+renderFloors();
+```
 
 This runs **once** when the page loads to render the initial state of the building:
 Two elevators, one on the **ground floor**, and one on the **top floor** (floor 6).
