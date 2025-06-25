@@ -18,6 +18,7 @@ As the next step, I tried to break the problem into smaller parts and started bu
 ### 2. System Goal
 
 The purpose of this task is to build a **simulation of a building elevator control system with two elevators**.
+
 Based on the task description, I identified the following core requirements:
 *The building has **7 floors**, indexed from 0 to 6.
 *There are **2 elevators**: Elevator A and Elevator B.
@@ -35,12 +36,14 @@ Based on the task description, I identified the following core requirements:
 
 I chose to implement this task using **HTML, CSS, and JavaScript**. My goal was to build a simple, functional application that provides quick visual feedback.
 The purpose was not to create a beautiful UI, but to show my **thinking process**, **logical structure**, and **coding style**.
+
 During the implementation, I applied a **JavaScript-based logic** where:
   *the elevator states are stored in objects,
   *and the events are handled through functions.
+
 I first created the `index.html` and `styles.css` files, using minimal code in them.
 Then I focused mainly on the `elevator.js` file, which contains the main logic.
-Therefore, in this documentation, I do not describe the HTML and CSS files in detail — only the contents and behavior of `elevator.js`.
+Therefore, in this documentation, I do not describe the HTML and CSS files in detail, only the contents and behavior of `elevator.js`.
 
 In the `index.html` file, there's a `div` element with the ID `"building"` placed just after the `<h1>` heading. This is dynamically populated from the JavaScript code to generate the building layout.
 
@@ -53,12 +56,14 @@ In the `index.html` file, there's a `div` element with the ID `"building"` place
 ### 5. Diagram – Elevator Logic
 
 The diagram below illustrates the step-by-step logic behind the elevator control system.
+
 **Process flow:**
 1. The user presses an ⬆️ or ⬇️ button on a specific floor.
 2. The system determines which elevator is closest to the requested floor.
 3. The selected elevator starts moving toward the target floor.
 4. While moving, the system continuously updates the display (render).
 5. Once the elevator reaches the target floor, the animation stops.
+
 This diagram makes the control logic easier to understand and visualize.
 <p align="center">
 <img src="https://raw.githubusercontent.com/galsandor2012/elevator-control-system/main/elevator-logic-diagram.png" width="500" />
