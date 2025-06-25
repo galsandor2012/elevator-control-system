@@ -32,7 +32,7 @@ When the elevator reaches the destination, the animation stops.
 
 ---
 ### 7. Live Demo Link
-You can view the working version of the project at the following link: [Elevator Control System](https://pages.github.com/](https://elevator-control-system-galsandor.netlify.app/)
+You can view the working version of the project at the following link: [Elevator Control System](https://elevator-control-system-galsandor.netlify.app/)
 
 
 
