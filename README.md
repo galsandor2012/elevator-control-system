@@ -28,10 +28,9 @@ The system determines which elevator is closest to the requested floor.
 The selected elevator starts moving toward the target floor.
 During the movement, the UI is re-rendered continuously.
 When the elevator reaches the destination, the animation stops.
-![Elevator logic diagram](elevator-logic-diagram.png {width=40px height=400px})
-
-<img src="https://raw.githubusercontent.com/galsandor2012/elevator-control-system/main/elevator-logic-diagram.png" width="200" height="400" />
-
+<p align="center">
+<img src="https://raw.githubusercontent.com/galsandor2012/elevator-control-system/main/elevator-logic-diagram.png" width="400" />
+</p>
 ---
 ### 7. Live Demo Link
 You can view the working version of the project at the following link: [Elevator Control System](https://elevator-control-system-galsandor.netlify.app/)
