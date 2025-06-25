@@ -9,7 +9,9 @@ My goal is to explain the system's logic and my thinking in a clear and understa
 ### 1. Understanding the Task
 
 When I first read the task description, it seemed complex, so I decided to ask ChatGPT for help in order to better understand it.
+
 I approached it **as if I were asking a client for more details and clarifications** about the requirements.
+
 I believe that **before I start coding**, it's important to **thoroughly understand the problem**, so I can avoid going in the wrong direction during implementation.
 As the next step, I tried to break the problem into smaller parts and started building a working solution based on that.
 
@@ -38,8 +40,8 @@ I chose to implement this task using **HTML, CSS, and JavaScript**. My goal was 
 The purpose was not to create a beautiful UI, but to show my **thinking process**, **logical structure**, and **coding style**.
 
 During the implementation, I applied a **JavaScript-based logic** where:
-  *the elevator states are stored in objects,
-  *and the events are handled through functions.
+  * the elevator states are stored in objects,
+  * and the events are handled through functions.
 
 I first created the `index.html` and `styles.css` files, using minimal code in them.
 Then I focused mainly on the `elevator.js` file, which contains the main logic.
