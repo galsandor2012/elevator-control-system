@@ -54,6 +54,19 @@ In the `index.html` file, there's a `div` element with the ID `"building"` place
 
 ### 4. Code & Behaviour (`elevator.js`)
 
+**4.1. Defining the Number of Floors**
+
+`const FLOORS = 7;`
+
+This constant (`const`) defines how many levels the building has. Since we start counting from 0, this represents floors `0` through `6`, resulting in a total of **7 floors** (Ground + 6 upper floors).
+We use **uppercase letters** for the variable name to indicate that it is a constant value, which will not change during the execution of the program.
+
+
+
+
+
+
+
 ---
 
 ### 5. Diagram – Elevator Logic
