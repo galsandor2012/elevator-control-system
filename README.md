@@ -31,7 +31,9 @@ When the elevator reaches the destination, the animation stops.
 <p align="center">
 <img src="https://raw.githubusercontent.com/galsandor2012/elevator-control-system/main/elevator-logic-diagram.png" width="500" />
 </p>
+
 ---
+
 ### 7. Live Demo Link
 You can view the working version of the project at the following link: [Elevator Control System](https://elevator-control-system-galsandor.netlify.app/)
 
