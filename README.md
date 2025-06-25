@@ -29,7 +29,7 @@ The selected elevator starts moving toward the target floor.
 During the movement, the UI is re-rendered continuously.
 When the elevator reaches the destination, the animation stops.
 <p align="center">
-<img src="https://raw.githubusercontent.com/galsandor2012/elevator-control-system/main/elevator-logic-diagram.png" width="400" />
+<img src="https://raw.githubusercontent.com/galsandor2012/elevator-control-system/main/elevator-logic-diagram.png" width="500" />
 </p>
 ---
 ### 7. Live Demo Link
