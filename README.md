@@ -20,15 +20,15 @@ As the next step, I tried to break the problem into smaller parts and started bu
 The purpose of this task is to build a **simulation of a building elevator control system with two elevators**.
 
 Based on the task description, I identified the following core requirements:
-*The building has **7 floors**, indexed from 0 to 6.
-*There are **2 elevators**: Elevator A and Elevator B.
-*The system must decide **which elevator should respond** to a call:
-  *The elevator **closest to the requested floor** will move.
-  *If both elevators are equally distant, the one **on the lower floor** will respond.
-*The system must display:
-  ***The current position of each elevator**
-  ***The direction of movement**
-  ***The selected destination**
+* The building has **7 floors**, indexed from 0 to 6.
+* There are **2 elevators**: Elevator A and Elevator B.
+* The system must decide **which elevator should respond** to a call:
+  * The elevator **closest to the requested floor** will move.
+  * If both elevators are equally distant, the one **on the lower floor** will respond.
+* The system must display:
+  * **The current position of each elevator**
+  * **The direction of movement**
+  * **The selected destination**
 
 ---
 
