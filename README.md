@@ -109,8 +109,47 @@ liftPos.textContent = lifts
 This checks whether there is an elevator on the current floor.
 If so, it displays the elevator’s name.
 
-**4.5. Displaying Buttons and Elevator Positions**
+**4.5. Calling the Elevator – `callElevator()`**
 
+`function callElevator(requestedFloor, direction) {
+   const chosenLift = getClosestLift(requestedFloor);
+   moveLift(chosenLift, requestedFloor);
+}`
+
+This function is triggered when a button is pressed. Its responsibilities:
+* Determine which elevator is **closest** to the requested floor,
+* Start the movement of that elevator.
+
+**4.6. Selecting the Closest Elevator – `getClosestLift()`**
+
+`function getClosestLift(floor) {
+  ...
+}`
+
+This function determines which elevator is **closest** to the called floor.
+If both elevators are equally distant, it selects the one located on the **lower floor**.
+
+**4.7. Moving the Elevator – `moveLift()`**
+
+`function moveLift(lift, targetFloor) {
+   const interval = setInterval(() => {
+     ...
+   }, 500);
+}`
+
+This function **moves the elevator step by step**:
+* It updates every 500 milliseconds,
+* At each step, it re-renders the building,
+* Once the elevator reaches the target floor, it stops the interval.
+
+The `setInterval` method starts a **timed loop**, which continuously updates the elevator’s position, simulating movement.
+
+**4.8. Initial Rendering**
+
+`renderFloors();`
+
+This runs **once** when the page loads to render the initial state of the building:
+Two elevators, one on the **ground floor**, and one on the **top floor** (floor 6).
 
 ---
 
