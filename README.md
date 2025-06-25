@@ -61,10 +61,55 @@ In the `index.html` file, there's a `div` element with the ID `"building"` place
 This constant (`const`) defines how many levels the building has. Since we start counting from 0, this represents floors `0` through `6`, resulting in a total of **7 floors** (Ground + 6 upper floors).
 We use **uppercase letters** for the variable name to indicate that it is a constant value, which will not change during the execution of the program.
 
+**4.2. Initializing the Elevators**
 
+`const lifts = [
+  { name: "A 🛗", currentFloor: 0 },
+  { name: "B 🛗", currentFloor: 6 },
+];`
 
+This is an **array** that contains two **objects** – representing the two elevators:
+* `name`: an identifier or emoji that helps distinguish between the elevators,
+* `currentFloor`: stores the current floor the elevator is on.
+At the start of the program, one elevator is on the ground floor (`0`), and the other is on the top floor (`6`).
 
+**4.3. Rendering the Building – `renderFloors()`**
 
+`function renderFloors() {
+  const building = document.getElementById("building");
+  building.innerHTML = "";
+  ...
+}`
+
+This function **renders the entire building** into the browser. For each floor, it creates:
+* a floor label (e.g., `Floor 4` or `Ground`),
+* a direction button panel (⬆️, ⬇️),
+* and a display indicating whether there is an elevator on that floor.
+* If the current floor is 0, the label will show as **Ground**.
+
+`for (let i = FLOORS - 1; i >= 0; i--) {`
+
+This loop draws the building from top to bottom, starting from the highest floor down to the ground floor.
+
+**4.4. Displaying Buttons and Elevator Positions**
+
+`if (i < FLOORS - 1) { ... ⬆️ button ... }
+if (i > 0)         { ... ⬇️ button ... }`
+
+The buttons are shown **only if there is somewhere to go**:
+* No up-button on the top floor.
+* No down-button on the ground floor.
+
+`const liftPos = document.createElement("div");
+liftPos.textContent = lifts
+  .filter(l => l.currentFloor === i)
+  .map(l => l.name)
+  .join(", ") || "";`
+
+This checks whether there is an elevator on the current floor.
+If so, it displays the elevator’s name.
+
+**4.5. Displaying Buttons and Elevator Positions**
 
 
 ---
