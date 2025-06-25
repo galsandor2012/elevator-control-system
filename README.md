@@ -63,9 +63,9 @@ We use **uppercase letters** for the variable name to indicate that it is a cons
 
 **4.2. Initializing the Elevators**
 
-`const lifts = [
-  { name: "A 🛗", currentFloor: 0 },
-  { name: "B 🛗", currentFloor: 6 },
+`const lifts = [<br>
+  { name: "A 🛗", currentFloor: 0 },<br>
+  { name: "B 🛗", currentFloor: 6 },<br>
 ];`
 
 This is an **array** that contains two **objects** – representing the two elevators:
