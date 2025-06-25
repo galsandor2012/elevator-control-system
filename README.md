@@ -28,7 +28,7 @@ The system determines which elevator is closest to the requested floor.
 The selected elevator starts moving toward the target floor.
 During the movement, the UI is re-rendered continuously.
 When the elevator reaches the destination, the animation stops.
-![Elevator logic diagram](elevator-logic-diagram.png | width=100)
+![Elevator logic diagram](elevator-logic-diagram.png {width=40px height=400px})
 
 ---
 ### 7. Live Demo Link
